@@ -17,7 +17,12 @@
 			% for tip in tips:
 				<div class='tip'>
 					<pre>{{ !tip.text }}</pre>
-					<div class="mui--z4 mui-panel mui--text-danger"><strong>{{ tip.likes }}</strong> Likes | <strong>{{ tip.retweets }}</strong> Retweets | <strong class="mui--text-dark-hint">{{ tip.created }}</strong>  | <a href="https://twitter.com/bigdata_tip/status/{{ tip.tweetid }}" target="_blank"><i class="fa fa-share-alt"></i></a></div>
+					<div class="mui--z4 mui-panel mui--text-danger">
+						<strong>{{ tip.likes }}</strong>&ensp;<i class="fa fa-heart"></i>&emsp;|&emsp;
+						<strong>{{ tip.retweets }}</strong>&ensp;<i class="fa fa-twitter"></i>&emsp;|&emsp;
+						<strong class="mui--text-dark-hint">{{ tip.created }}</strong>&ensp;<i class="fa fa-calendar"></i>&emsp;|&emsp;
+						<a href="https://twitter.com/bigdata_tip/status/{{ tip.tweetid }}" target="_blank"><i class="fa fa-share-alt"></i></a>
+					</div>
 				</div>
 			% end
 

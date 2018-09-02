@@ -37,19 +37,19 @@
 	% end
 	<br>
 	<br>
-	<a href="https://docs.google.com/forms/d/e/1FAIpQLScsHklRH2-uplGYH_vxhtIin-zJS44bXQkAWCH7_N7nUdrGXw/viewform" target="_blank">
-		<button class="mui-btn mui-btn--primary">New Tip</button>
+	<a href="https://goo.gl/forms/qYMXKTVGrD4dM3Aq2" target="_blank">
+		<button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised">New Tip</button>
 	</a>
 	<div class="mui-dropdown">
-	<button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+	<button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" data-mui-toggle="dropdown">
 		More Tips
 		<span class="mui-caret"></span>
 	</button>
 	<ul class="mui-dropdown__menu">
-		<li><a href="https://twitter.com/laercio_serra" target="_blank">Created by @laercio_serra</a></li>
-		<li><a href="http://www.datafresh.com.br" target="_blank">Built for datafresh</a></li>
-		<li><a href="/" target="_blank">dash.io</a></li>
+		<li><a href="https://medium.com/" target="_blank">Medium</a></li>
+		<li><a href="http://binapratica.blogspot.com/" target="_blank">Blogger</a></li>
+		<li><a href="http://lserra.datafresh.com.br/" target="_blank">datafresh</a></li>
+		<li><a href="http://www.datafresh.com.br/" target="_blank">dash.io</a></li>
 	</ul>
 	</div>
-
   </div>
