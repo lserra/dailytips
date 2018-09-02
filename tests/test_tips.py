@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from collections import namedtuple, Counter
+
 import json
 import os
-
 import pytest
 
-from tips import (truncate_tables, get_hashtags,
-                  add_hashtags, get_tips, add_tips)
-from tasks import import_tweets, import_hashtags
+from collections import namedtuple, Counter
+from tips.db import truncate_tables, get_hashtags, add_hashtags, get_tips, add_tips
+from tasks.import_tweets import import_tweets, import_hashtags
+
 
 tweet = namedtuple('Tweet', 'id text created_at favorite_count retweet_count')
 

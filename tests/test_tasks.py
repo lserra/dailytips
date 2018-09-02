@@ -3,8 +3,8 @@
 
 
 from collections import namedtuple, Counter
+from tasks.import_tweets import get_hashtag_counter
 
-from tasks import get_hashtag_counter
 
 tip = namedtuple('Tip', 'text')
 
