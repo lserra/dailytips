@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 
@@ -10,8 +10,8 @@ import os
 import re
 import sys
 import tweepy
-import tips.db as db
-import tips.models as models
+import db
+import models
 
 from collections import Counter
 
