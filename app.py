@@ -5,7 +5,7 @@
 import os
 
 from bottle import route, run, request, static_file, view
-from tips.db import get_hashtags, get_tips
+from tips import get_hashtags, get_tips
 
 
 @route('/static/<filename:path>')

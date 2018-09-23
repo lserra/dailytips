@@ -12,7 +12,7 @@ import sys
 import tweepy
 
 from collections import Counter
-from tips.db import add_tips, truncate_tables, get_tips, add_hashtags
+from tips import add_tips, truncate_tables, get_tips, add_hashtags
 
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
