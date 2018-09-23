@@ -2,4 +2,4 @@
 # -*- coding: utf-8 -*-
 
 
-import import_tweets
+import tasks.import_tweets

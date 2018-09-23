@@ -10,8 +10,8 @@ import os
 import re
 import sys
 import tweepy
-import db
-import models
+import tips.db as db
+import tips.models as models
 
 from collections import Counter
 
@@ -74,11 +74,7 @@ def get_hashtag():
 
 
 if __name__ == '__main__':
-    try:
-        screen_name = sys.argv[1]
-    except IndexError:
-        screen_name = TWITTER_ACCOUNT
-
+    screen_name = TWITTER_ACCOUNT
     db.truncate_tables()
     get_tweet()
     get_hashtag()
