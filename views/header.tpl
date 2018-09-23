@@ -26,11 +26,8 @@
 
     <div class="mui--text-light mui--text-headline">
       <a href="/" target="_blank">
-        <img class="mui--align-middle" src='static/img/bigdata.png' alt='Daily Big Data Tips' height="100%" width="100%">
+        <img class="mui--align-middle" src='static/img/bigdata.png' alt='Daily Big Data Tips' height="85%" width="85%">
       </a>
-      <!--<a href="https://pybit.es" target="_blank">-->
-        <!--<img class="logo" src='https://pybit.es/images/pybites.png' alt='PyBites'>-->
-      <!--</a>-->
     </div>
 
 	<form action="/" method="GET" class="mui-form--inline">
@@ -40,7 +37,7 @@
 		<button class="mui-btn" disabled><i class="fa fa-search"></i></button>
 	</form>
 	% for tag in tags:
-	  <a style="font-size: {{ tag.count/10 + 1 }}em;" href="/{{ tag.name }}">#{{ tag.name }}</a>&nbsp;&nbsp;
+	  <a href="/{{ tag.name }}">#{{ tag.name }}</a>&nbsp;&nbsp;
 	% end
 	<br>
 	<br>
