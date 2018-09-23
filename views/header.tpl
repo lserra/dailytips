@@ -10,7 +10,15 @@
     <!-- load MUI -->
     <link href="static/css/style.css" rel="stylesheet" type="text/css" />
     <script src="//cdn.muicss.com/mui-0.9.28/js/mui.min.js"></script>
-    <title>datafesh tips</title>
+    <title>datafresh</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon.ico">
+		<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+		<link rel="manifest" href="/static/site.webmanifest">
+		<link rel="mask-icon" href="/static/img/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">		
   </head>
   <body>
 
@@ -31,7 +39,6 @@
 		</div>
 		<button class="mui-btn" disabled><i class="fa fa-search"></i></button>
 	</form>
-
 	% for tag in tags:
 	  <a style="font-size: {{ tag.count/10 + 1 }}em;" href="/{{ tag.name }}">#{{ tag.name }}</a>&nbsp;&nbsp;
 	% end
@@ -46,10 +53,9 @@
 		<span class="mui-caret"></span>
 	</button>
 	<ul class="mui-dropdown__menu">
-		<li><a href="https://medium.com/" target="_blank">Medium</a></li>
-		<li><a href="http://binapratica.blogspot.com/" target="_blank">Blogger</a></li>
-		<li><a href="http://lserra.datafresh.com.br/" target="_blank">datafresh</a></li>
-		<li><a href="http://www.datafresh.com.br/" target="_blank">dash.io</a></li>
+		<li><a href="http://www.datafresh.com.br/" target="_blank">datafresh</a></li>
+		<li><a href="http://binapratica.blogspot.com/" target="_blank">blog</a></li>
+		<li><a href="https://medium.com/" target="_blank">medium</a></li>
 	</ul>
 	</div>
   </div>
