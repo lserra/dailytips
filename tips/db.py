@@ -9,7 +9,7 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from .models import Base, Hashtag, Tip
+from tips.models import Base, Hashtag, Tip
 
 VALID_TAG = re.compile(r'^[a-z0-9]+$')
 
