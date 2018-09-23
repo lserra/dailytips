@@ -5,6 +5,7 @@
 from os import environ
 import re
 import sys
+import os
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -12,12 +13,14 @@ from sqlalchemy.orm import sessionmaker
 from tips.models import Base, Hashtag, Tip
 
 VALID_TAG = re.compile(r'^[a-z0-9]+$')
+DATABASE_URL = 'postgres://postgres:postgres@localhost:5432/datafresh'
 
 
 def _create_session():
-    db_url = environ.get('DATABASE_URL')
+    # db_url = os.environ.get('DATABASE_URL')
+    db_url = DATABASE_URL
 
-    if 'bigdatatip' in sys.argv[0]:
+    if 'datafresh' in sys.argv[0]:
         db_url += '_test'
 
     if not db_url:

@@ -10,9 +10,10 @@ import os
 import re
 import sys
 import tweepy
+import tips.db as db
+import tips.models as models
 
 from collections import Counter
-from tips import add_tips, truncate_tables, get_tips, add_hashtags
 
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
@@ -34,7 +35,7 @@ def _get_twitter_api_session():
     return tweepy.API(auth)
 
 
-def get_tweets(screen_name=TWITTER_ACCOUNT):
+def _get_tweets(screen_name=TWITTER_ACCOUNT):
     """
     The exclude_replies=True and include_rts=False arguments are convenient because we only want Daily Big Data Tip’s
     own tweets (not re-tweets).
@@ -60,16 +61,16 @@ def get_hashtag_counter(tips):
     return cnt
 
 
-def import_tweets(tweets=None):
+def get_tweet(tweets=None):
     if tweets is None:
-        tweets = get_tweets(screen_name)
-    add_tips(tweets)
+        tweets = _get_tweets(screen_name)
+    db.add_tips(tweets)
 
 
-def import_hashtags():
-    tips = get_tips()
+def get_hashtag():
+    tips = db.get_tips()
     hashtags_cnt = get_hashtag_counter(tips)
-    add_hashtags(hashtags_cnt)
+    db.add_hashtags(hashtags_cnt)
 
 
 if __name__ == '__main__':
@@ -78,7 +79,6 @@ if __name__ == '__main__':
     except IndexError:
         screen_name = TWITTER_ACCOUNT
 
-    truncate_tables()
-
-    import_tweets()
-    import_hashtags()
+    db.truncate_tables()
+    get_tweet()
+    get_hashtag()
