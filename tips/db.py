@@ -20,7 +20,7 @@ def _create_session():
     # db_url = os.environ.get('DATABASE_URL')
     db_url = DATABASE_URL
 
-    if 'datafresh' in sys.argv[0]:
+    if 'datafresh' in sys.argv:
         db_url += '_test'
 
     if not db_url:
