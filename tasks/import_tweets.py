@@ -10,8 +10,7 @@ import os
 import re
 import sys
 import tweepy
-import tips.db as db
-import tips.models as models
+from tips.db import truncate_tables, get_hashtags, add_hashtags, get_tips, add_tips
 
 from collections import Counter
 
@@ -63,18 +62,11 @@ def get_hashtag_counter(tips):
 
 def get_tweet(tweets=None):
     if tweets is None:
-        tweets = _get_tweets(screen_name)
-    db.add_tips(tweets)
+        tweets = _get_tweets(TWITTER_ACCOUNT)
+    add_tips(tweets)
 
 
 def get_hashtag():
-    tips = db.get_tips()
+    tips = get_tips()
     hashtags_cnt = get_hashtag_counter(tips)
-    db.add_hashtags(hashtags_cnt)
-
-
-if __name__ == '__main__':
-    screen_name = TWITTER_ACCOUNT
-    db.truncate_tables()
-    get_tweet()
-    get_hashtag()
+    add_hashtags(hashtags_cnt)
