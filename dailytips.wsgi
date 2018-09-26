@@ -1,14 +1,22 @@
-import sys, os
-
-# Change working directory so relative paths (and template lookup) work again
-os.chdir(os.path.dirname(__file__))
-sys.path.append(os.path.dirname(__file__))
-
-# ... build or import your bottle application here ...
-# Do NOT use bottle.run() with mod_wsgi
-
+# This file contains the WSGI configuration required to serve up your
+# web application at http://<your-username>.pythonanywhere.com/
+# It works by setting the variable 'application' to a WSGI handler of some
+# description.
+#
+# The below has been auto-generated for your Bottle project
 import bottle
-from rs import app as application
-from bottle import route
-import hello_world
-application=bottle.default_app()
+import os
+import sys
+
+# add your project directory to the sys.path
+project_home = u'/home/datafresh/mysite'
+if project_home not in sys.path:
+    sys.path = [project_home] + sys.path
+
+# make sure the default templates directory is known to Bottle
+templates_dir = os.path.join(project_home, 'views/')
+if templates_dir not in bottle.TEMPLATE_PATH:
+    bottle.TEMPLATE_PATH.insert(0, templates_dir)
+
+# import bottle application
+from hello_world import application
