@@ -9,7 +9,7 @@ import os
 import sys
 
 # add your project directory to the sys.path
-project_home = u'/home/datafresh/mysite'
+project_home = u'/home/datafresh/apps_wsgi/dailytips'
 if project_home not in sys.path:
     sys.path = [project_home] + sys.path
 
@@ -19,4 +19,4 @@ if templates_dir not in bottle.TEMPLATE_PATH:
     bottle.TEMPLATE_PATH.insert(0, templates_dir)
 
 # import bottle application
-from hello_world import application
+from dailytips import application
