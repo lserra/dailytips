@@ -2,9 +2,15 @@ atomicwrites==1.2.1
 attrs==18.1.0
 certifi==2018.8.24
 chardet==3.0.4
+Click==7.0
+Flask==1.0.2
 idna==2.7
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
 more-itertools==4.3.0
 oauthlib==2.1.0
+pep8==1.7.1
 pluggy==0.7.1
 psycopg2==2.7.5
 py==1.6.0
@@ -16,3 +22,4 @@ six==1.11.0
 SQLAlchemy==1.2.11
 tweepy==3.6.0
 urllib3==1.23
+Werkzeug==0.14.1
