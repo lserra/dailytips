@@ -7,8 +7,9 @@ import os
 import pytest
 
 from collections import namedtuple, Counter
-from tips.db import truncate_tables, get_hashtags, add_hashtags, get_tips, add_tips
 from tasks.import_tweets import import_tweets, import_hashtags
+from tips.db import truncate_tables, get_hashtags, add_hashtags, get_tips,
+add_tips
 
 
 tweet = namedtuple('Tweet', 'id text created_at favorite_count retweet_count')
