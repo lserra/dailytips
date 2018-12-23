@@ -25,7 +25,6 @@ def index(tag=None):
             'tips': tips}
 
 
-# application = default_app()
 if os.environ.get('APP_LOCATION') == 'kinghost':
     run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 else:
