@@ -17,7 +17,6 @@ DATABASE_URL = os.environ.get('DATABASE_URL')
 
 
 def _create_session():
-    # db_url = os.environ.get('DATABASE_URL')
     db_url = DATABASE_URL
 
     if 'datafresh' in sys.argv:
