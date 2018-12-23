@@ -42,7 +42,8 @@ def truncate_tables():
 
 
 def get_hashtags():
-    return session.query(Hashtag).order_by(Hashtag.count.desc()).all()
+    hastags = session.query(Hashtag).order_by(Hashtag.count.desc()).limit(10)
+    return hastags
 
 
 def add_hashtags(hashtags_cnt):

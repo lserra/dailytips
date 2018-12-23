@@ -39,4 +39,21 @@
 	% for tag in tags:
 	  <a href="/{{ tag.name }}">#{{ tag.name }}</a>&nbsp;&nbsp;
 	% end
+  <br>
+  <br>
+  <a href="https://goo.gl/forms/qYMXKTVGrD4dM3Aq2" target="_blank">
+  <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised">New Tip</button>
+  </a>
+  <div class="mui-dropdown">
+    <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" data-mui-toggle="dropdown">
+      More Tips
+      <span class="mui-caret"></span>
+    </button>
+    <ul class="mui-dropdown__menu">
+      <li><a href="http://www.datafresh.com.br/" target="_blank">datafresh</a></li>
+      <li><a href="http://www.datafresh.com.br/helloworld/" target="_blank">github</a></li>
+      <li><a href="http://binapratica.blogspot.com/" target="_blank">blog</a></li>
+      <li><a href="https://medium.com/" target="_blank">medium</a></li>
+    </ul>
+  </div>
   </div>
