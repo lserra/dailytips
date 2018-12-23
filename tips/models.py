@@ -12,7 +12,7 @@ Base = declarative_base()
 class Hashtag(Base):
     __tablename__ = 'hashtags'
     id = Column(Integer, Sequence('id_seq'), primary_key=True)
-    name = Column(String(20))
+    name = Column(String(50))
     count = Column(Integer)
 
     def __repr__(self):
@@ -22,8 +22,8 @@ class Hashtag(Base):
 class Tip(Base):
     __tablename__ = 'tips'
     id = Column(Integer, Sequence('id_seq'), primary_key=True)
-    tweetid = Column(String(22))
-    text = Column(String(300))
+    tweetid = Column(String(25))
+    text = Column(String(350))
     created = Column(DateTime)
     likes = Column(Integer)
     retweets = Column(Integer)
