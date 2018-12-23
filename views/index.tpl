@@ -1,4 +1,4 @@
-% include('header.html', tags=tags)
+% include('header.tpl', tags=tags)
 
 <div id="content" class="mui-container-fluid">
 
@@ -31,4 +31,4 @@
 
 </div>
 
-% include('footer.html')
+% include('footer.tpl')

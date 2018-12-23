@@ -4,8 +4,7 @@
 
 import os
 from tips.db import get_hashtags, get_tips
-# from bottle import default_app, route, run, request, static_file, view
-from flask import Flask
+from bottle import default_app, route, run, request, static_file, view
 
 
 @route('/static/<filename:path>')
@@ -26,8 +25,8 @@ def index(tag=None):
             'tips': tips}
 
 
-# if os.environ.get('APP_LOCATION') == 'kinghost':
-#     run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-# else:
-#     run(host='localhost', port=8080, debug=True, reloader=True)
-application = default_app()
+# application = default_app()
+if os.environ.get('APP_LOCATION') == 'kinghost':
+    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+else:
+    run(host='localhost', port=8080, debug=True, reloader=True)
