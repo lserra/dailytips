@@ -20,11 +20,11 @@ from tips.db import (
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 
-CONSUMER_KEY = os.environ.get('CONSUMER_KEY')
-CONSUMER_SECRET = os.environ.get('CONSUMER_SECRET')
-ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
-ACCESS_SECRET = os.environ.get('ACCESS_SECRET')
-TWITTER_ACCOUNT = os.environ.get('BIGDATA_TIP_APP_TWITTER_ACCOUNT')
+CONSUMER_KEY = os.environ.get(u'CONSUMER_KEY')
+CONSUMER_SECRET = os.environ.get(u'CONSUMER_SECRET')
+ACCESS_TOKEN = os.environ.get(u'ACCESS_TOKEN')
+ACCESS_SECRET = os.environ.get(u'ACCESS_SECRET')
+TWITTER_ACCOUNT = os.environ.get(u'BIGDATA_TIP_APP_TWITTER_ACCOUNT')
 EXCLUDE_PYTHON_HASHTAG = True
 
 # Extracting hashtags from the tips
