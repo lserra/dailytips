@@ -13,7 +13,7 @@ from sqlalchemy.orm import sessionmaker
 from tips.models import Base, Hashtag, Tip
 
 VALID_TAG = re.compile(r'^[a-z0-9]+$')
-DATABASE_URL = 'postgres://postgres:postgres@localhost:5432/datafresh'
+DATABASE_URL = os.environ.get('DATABASE_URL')
 
 
 def _create_session():

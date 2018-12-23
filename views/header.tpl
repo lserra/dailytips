@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//cdn.muicss.com/mui-0.9.28/css/mui.min.css" rel="stylesheet" type="text/css" />
-	<!-- load icon font -->
+		<!-- load icon font -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- load MUI -->
     <link href="static/css/style.css" rel="stylesheet" type="text/css" />
@@ -39,21 +39,4 @@
 	% for tag in tags:
 	  <a href="/{{ tag.name }}">#{{ tag.name }}</a>&nbsp;&nbsp;
 	% end
-	<br>
-	<br>
-	<a href="https://goo.gl/forms/qYMXKTVGrD4dM3Aq2" target="_blank">
-		<button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised">New Tip</button>
-	</a>
-	<div class="mui-dropdown">
-	<button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" data-mui-toggle="dropdown">
-		More Tips
-		<span class="mui-caret"></span>
-	</button>
-	<ul class="mui-dropdown__menu">
-		<li><a href="http://www.datafresh.com.br/" target="_blank">datafresh</a></li>
-		<li><a href="http://www.datafresh.com.br/helloworld/" target="_blank">github</a></li>
-		<li><a href="http://binapratica.blogspot.com/" target="_blank">blog</a></li>
-		<li><a href="https://medium.com/" target="_blank">medium</a></li>
-	</ul>
-	</div>
   </div>
